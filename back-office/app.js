@@ -7,14 +7,6 @@ const mongoose = require("mongoose");
 
 const scheduleRoutes = require("./api/routes/schedule");
 
-mongoose.connect(
-  "mongodb+srv://devel_lopes:82008456ml@cluster0-4rbrc.mongodb.net/test?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
-
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -6,14 +6,15 @@ var axios = require("axios");
 
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(0, 6)];
+//DEFINIR A HORA QUE VAI SER EXECUTADO O SCHEDULE
 rule.hour = 22;
 rule.minute = 57;
 console.log(rule);
 var j = schedule.scheduleJob(rule, function () {
   let listEmails;
 
+  //DEFINIR O IP DO BACKEND
   const ip = 'IP DO BACKEND';
-
   
   axios
      .get(`${ip}:4000/ordemServico/listEmails`)
@@ -24,6 +25,7 @@ var j = schedule.scheduleJob(rule, function () {
 
   function sendEmails(item, index, arr) {
 
+    //DEFINIR O EMAIL E A SENHA DO GMAIL QUE VAI ENVIAR OS EMAILS
     const userMail = "SEU EMAIL";
     const passMail = "SUA SENHA";
 
