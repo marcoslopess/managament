@@ -1,0 +1,90 @@
+.ant-modal-mask {
+  background-color: rgb(29, 29, 45) !important;
+}
+
+.p-modal {
+  color: rgb(29, 29, 45) !important;
+}
+
+.card {
+  background-color: transparent;
+  text-align: center;
+}
+
+.email-link:link,
+.email-link:visited,
+.email-link:hover {
+  background-color: transparent;
+  color: #2b6bf6;
+  padding: 0px 5px;
+  margin-left: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.email-link:hover,
+.email-link:active {
+  background-color: transparent;
+}
+
+.alert-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.divContent-agendados {
+  overflow: auto;
+  height: 475px;
+}
+
+.divContent-ociosos {
+  overflow: auto;
+  height: 475px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #237cf6;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #237cf6;
+}
+
+// .email-link:hover {
+//     text-decoration: none;
+//     color: #237cf6;
+// }
+
+// a:link, a:visited {
+//     background-color: #237cf6;
+//     text-decoration: none;
+//     display: inline-block;
+//   }
+
+
+// .MuiTypography-body1 {
+//   background-color: #27293d !important;
+// }
+
+// .MuiPopover-paper {
+//   background-color: #27293d !important;
+// }
+
+.MuiTypography-body1 {
+  color: #000 !important;
+
+}
