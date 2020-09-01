@@ -47,6 +47,7 @@ Agora você vai entrar no projeto frontend
     $ cd ..
     $ cd frontend
 ```
+Agora procure o arquivo README.md do diretório frontend para continuar a execução.
 
 ---
 

@@ -54,6 +54,7 @@ Agora você vai entrar no projeto back-office
     $ cd ..
     $ cd back-office
 ```
+Agora procure o arquivo README.md do diretório back-office para continuar a execução.
 
 ---
 

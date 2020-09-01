@@ -45,7 +45,7 @@ Entre nos diretórios para continuar a execução, começando pelo backend.
 ```bash
     $ cd backend
 ```
-Agora procure o arquivo README.md para continuar a execução.
+Agora procure o arquivo README.md do diretório backend para continuar a execução.
 
 ---
 
