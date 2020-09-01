@@ -3,18 +3,19 @@ const router = express.Router();
 const moment = require("moment");
 var schedule = require("node-schedule");
 var axios = require("axios");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(0, 6)];
-//DEFINIR A HORA QUE VAI SER EXECUTADO O SCHEDULE
-rule.hour = 22;
-rule.minute = 57;
-console.log(rule);
+rule.hour = process.env.HORA_SCHEDULE;
+rule.minute = process.env.MINUTO_SCHEDULE;
+
 var j = schedule.scheduleJob(rule, function () {
   let listEmails;
 
-  //DEFINIR O IP DO BACKEND
-  const ip = 'IP DO BACKEND';
+  const ip = process.env.URL_BACKEND;
   
   axios
      .get(`${ip}:4000/ordemServico/listEmails`)
@@ -26,8 +27,8 @@ var j = schedule.scheduleJob(rule, function () {
   function sendEmails(item, index, arr) {
 
     //DEFINIR O EMAIL E A SENHA DO GMAIL QUE VAI ENVIAR OS EMAILS
-    const userMail = "SEU EMAIL";
-    const passMail = "SUA SENHA";
+    const userMail = process.env.EMAIL_ENVIO;
+    const passMail = process.env.SENHA_ENVIO;
 
     const sendCliente = require("gmail-send")({
       user: userMail,

@@ -4,6 +4,9 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const clienteRoutes = require("./api/routes/cliente");
 const ordemServicoRoutes = require("./api/routes/ordemServico");
@@ -15,10 +18,11 @@ const loginRoutes = require("./api/routes/login");
 
 //CONECTANDO AO MONGODB ATLAS
 mongoose.connect(
-  "mongodb+srv://open:123456789open@open.jo5wc.mongodb.net/open?retryWrites=true&w=majority",
+  process.env.URL_MONGODB,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   }
 );
 
